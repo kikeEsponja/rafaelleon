@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body{ 
+    margin: 0;
+    padding: 0; 
+}
+header{
+    background: rgb(253, 43, 115);
+}
+/* CSS crítico inline para evitar bloqueo de renderización */
+/* Skeleton loader para contenido above-the-fold */
+.skeleton { 
+  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+@keyframes skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Optimizaciones para Swiper */
+.swiper {
+  contain: layout style paint;
+  will-change: transform;
+}
+.swiper-slide {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.swiper-wrapper {
+  will-change: transform;
+  transform: translateZ(0);
+}
+.swiper-button-next,
+.swiper-button-prev {
+  will-change: opacity;
+  contain: layout;
+}
