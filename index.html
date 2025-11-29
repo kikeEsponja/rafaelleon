@@ -2,46 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-      /* CSS crítico inline para evitar bloqueo de renderización */
-      body { margin: 0; padding: 0; }
-      * { box-sizing: border-box; }
-      
-      /* Skeleton loader para contenido above-the-fold */
-      .skeleton { 
-        background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
-        background-size: 400% 100%;
-        animation: skeleton-loading 1.4s ease-in-out infinite;
-      }
-      
-      @keyframes skeleton-loading {
-        0% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      
-      /* Optimizaciones para Swiper */
-      .swiper {
-        contain: layout style paint;
-        will-change: transform;
-      }
-      
-      .swiper-slide {
-        will-change: transform;
-        backface-visibility: hidden;
-        transform: translateZ(0);
-      }
-      
-      .swiper-wrapper {
-        will-change: transform;
-        transform: translateZ(0);
-      }
-      
-      .swiper-button-next,
-      .swiper-button-prev {
-        will-change: opacity;
-        contain: layout;
-      }
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafaél León</title>
     <meta name="description" content="Prepárate para 4 días de ofertas exclusivas. Las empresas más representativas del país con descuentos online únicos.">
@@ -309,6 +269,7 @@
     <link rel="modulepreload" as="script" crossorigin="" href="/assets/js/CustomButton-BOTZvsAd.js">
     <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/619910500/?random=1764383879619&amp;cv=11&amp;fst=1764383879619&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be5bi1z8830020667za200zb830020667zd830020667xea&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102015666~103116026~103200004~104527907~104528501~104684208~104684211~115583767~115616985~115938466~115938468~116184927~116184929~116217636~116217638~116251935~116251937&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Fcyberwow.pe%2F&amp;ref=https%3A%2F%2Fweb.telegram.org%2F&amp;frm=0&amp;tiba=CyberWow%202025%20-%204%20d%C3%ADas%20de%20superofertas%20online&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1642800785.1764339649&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B142.0.7444.176%7CMicrosoft%2520Edge%3B142.0.3595.94%7CNot_A%2520Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;_tu=CA&amp;rfmt=3&amp;fmt=4"></script>
     <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/384475593/?random=1764383881726&amp;cv=11&amp;fst=1764383881726&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=view_brand_list&amp;gtm=45be5bi1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115583767~115938466~115938468~116184927~116184929~116217636~116217638&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Fcyberwow.pe%2F&amp;ref=https%3A%2F%2Fweb.telegram.org%2F&amp;frm=0&amp;tiba=CyberWow%202025%20-%204%20d%C3%ADas%20de%20superofertas%20online&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1642800785.1764339649&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B142.0.7444.176%7CMicrosoft%2520Edge%3B142.0.3595.94%7CNot_A%2520Brand%3B99.0.0.0&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;data=event%3Dview_brand_list%3Bbrand_count%3D20%3Bpage_path%3D%2Fbrands&amp;rfmt=3&amp;fmt=4"></script>
+    <link rel="stylesheet" href="./estilos/estilos.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body style="overflow: unset;">
@@ -322,17 +283,24 @@
     <div id="root">
         <div class="flex flex-col items-center justify-center">
             <div class="grid place-items-center w-full h-20" style="background-color: rgb(253, 43, 115);">
-                <div class="relative flex items-center justify-center max-edxll:px-5 edxl:justify-between w-full max-w-[1200px]">
-                    <img class="edxl:hidden absolute left-4 h-12 w-12" alt="Menu Icon" src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.00001%2036C7.43334%2036%206.95867%2035.808%206.57601%2035.424C6.19334%2035.04%206.00134%2034.5653%206.00001%2034C5.99867%2033.4347%206.19067%2032.96%206.57601%2032.576C6.96134%2032.192%207.43601%2032%208.00001%2032H40C40.5667%2032%2041.042%2032.192%2041.426%2032.576C41.81%2032.96%2042.0013%2033.4347%2042%2034C41.9987%2034.5653%2041.8067%2035.0407%2041.424%2035.426C41.0413%2035.8113%2040.5667%2036.0027%2040%2036H8.00001ZM8.00001%2026C7.43334%2026%206.95867%2025.808%206.57601%2025.424C6.19334%2025.04%206.00134%2024.5653%206.00001%2024C5.99867%2023.4347%206.19067%2022.96%206.57601%2022.576C6.96134%2022.192%207.43601%2022%208.00001%2022H40C40.5667%2022%2041.042%2022.192%2041.426%2022.576C41.81%2022.96%2042.0013%2023.4347%2042%2024C41.9987%2024.5653%2041.8067%2025.0407%2041.424%2025.426C41.0413%2025.8113%2040.5667%2026.0027%2040%2026H8.00001ZM8.00001%2016C7.43334%2016%206.95867%2015.808%206.57601%2015.424C6.19334%2015.04%206.00134%2014.5653%206.00001%2014C5.99867%2013.4347%206.19067%2012.96%206.57601%2012.576C6.96134%2012.192%207.43601%2012%208.00001%2012H40C40.5667%2012%2041.042%2012.192%2041.426%2012.576C41.81%2012.96%2042.0013%2013.4347%2042%2014C41.9987%2014.5653%2041.8067%2015.0407%2041.424%2015.426C41.0413%2015.8113%2040.5667%2016.0027%2040%2016H8.00001Z'%20fill='white'/%3e%3c/svg%3e">
+                <div class="navegador relative flex items-center justify-center px-5 md:px-8 lg:px-10 w-full">
+                    <img id="menuBtn" class="md:hidden absolute left-4 h-12 w-12" alt="Menu Icon" src="data:image/svg+xml,%3csvg%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8.00001%2036C7.43334%2036%206.95867%2035.808%206.57601%2035.424C6.19334%2035.04%206.00134%2034.5653%206.00001%2034C5.99867%2033.4347%206.19067%2032.96%206.57601%2032.576C6.96134%2032.192%207.43601%2032%208.00001%2032H40C40.5667%2032%2041.042%2032.192%2041.426%2032.576C41.81%2032.96%2042.0013%2033.4347%2042%2034C41.9987%2034.5653%2041.8067%2035.0407%2041.424%2035.426C41.0413%2035.8113%2040.5667%2036.0027%2040%2036H8.00001ZM8.00001%2026C7.43334%2026%206.95867%2025.808%206.57601%2025.424C6.19334%2025.04%206.00134%2024.5653%206.00001%2024C5.99867%2023.4347%206.19067%2022.96%206.57601%2022.576C6.96134%2022.192%207.43601%2022%208.00001%2022H40C40.5667%2022%2041.042%2022.192%2041.426%2022.576C41.81%2022.96%2042.0013%2023.4347%2042%2024C41.9987%2024.5653%2041.8067%2025.0407%2041.424%2025.426C41.0413%2025.8113%2040.5667%2026.0027%2040%2026H8.00001ZM8.00001%2016C7.43334%2016%206.95867%2015.808%206.57601%2015.424C6.19334%2015.04%206.00134%2014.5653%206.00001%2014C5.99867%2013.4347%206.19067%2012.96%206.57601%2012.576C6.96134%2012.192%207.43601%2012%208.00001%2012H40C40.5667%2012%2041.042%2012.192%2041.426%2012.576C41.81%2012.96%2042.0013%2013.4347%2042%2014C41.9987%2014.5653%2041.8067%2015.0407%2041.424%2015.426C41.0413%2015.8113%2040.5667%2016.0027%2040%2016H8.00001Z'%20fill='white'/%3e%3c/svg%3e">
                     <a href="/" data-discover="true">
                         <img class="h-12 w-[172px]" alt="Cyberwow Logo" src="./imagenes/cyberwow-logo-Ced2-r7l.svg">
                     </a>
-                    <div class="hidden edxl:flex items-center gap-10">
+                    <div class="hidden md:flex items-center gap-10">
                         <a class="font-bourgeois text-white leading-none text-[18px]" href="/nosotros" data-discover="true">¿Qué es Cyber Wow?</a>
                         <a class="font-bourgeois text-white leading-none text-[18px]" href="/tips" data-discover="true">Tips y recomendaciones</a>
-                        <a class="grid place-items-center bg-[url('@/shared/assets/images/bg-head-button.svg')] bg-no-repeat bg-cover h-12 w-[272px]" href="/inscripcion" data-discover="true">
+                        <a class="boton_mmgv grid place-items-center bg-no-repeat bg-cover h-12 w-[272px]" href="/inscripcion" data-discover="true">
                             <span class="font-bourgeois text-white font-bold leading-none text-[18px]">Participa con tu marca aquí</span>
                         </a>
+                    </div>
+                </div>
+                <div id="mobileMenu" class="fixed top-0 left-0 w-full h-full bg-black/70 hidden">
+                    <div class="bg-white w-64 h-full p-6">
+                        <a href="/nosotros" class="block mb-4 text-lg font-semibold">¿Qué es Cyber Wow?</a>
+                        <a href="/tips" class="block mb-4 text-lg font-semibold">Tips y recomendaciones</a>
+                        <a href="/inscripcion" class="block mt-2 p-3 bg-pink-500 text-white rounded">Participa con tu marca aquí</a>
                     </div>
                 </div>
             </div>
@@ -358,125 +326,125 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="cursor-pointer font-bourgeois bg-no-repeat bg-size-[100%_100%] ml:bg-cover bg-[url('@/shared/assets/images/button-bg.webp')] font-bold leading-none text-white text-[18px] h-11 ml:h-12 w-[88px] ml:w-[104px]">Buscar</button>
+                            <button class="boton_mmgv cursor-pointer font-bourgeois bg-no-repeat bg-size-[100%_100%] ml:bg-cover bg-[#FD2B73] font-bold leading-none text-white text-[18px] h-11 ml:h-12 w-[88px] ml:w-[104px]">Buscar</button>
                         </form>
                     </div>
                     <div class="grid justify-center max-sm:justify-items-center grid-cols-1 sm:grid-cols-[repeat(2,176px)] sd:grid-cols-[repeat(3,176px)] ml:grid-cols-[repeat(3,288px)] xl:grid-cols-[repeat(4,288px)] gap-2">
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://simple.ripley.com.pe/minisitios/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
-                            <div class="relative w-full h-full flex items-center justify-center">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://simple.ripley.com.pe/minisitios/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                            <div class=" relative w-full h-full flex items-center justify-center">
                                 <img alt="RIPLEY" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/jBoEsm3i7lhAc2HuR3xXIZgttr68XSFfy3Yz0XpS.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">RIPLEY</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendaonline.movistar.com.pe/Renueva-app-2?utm_source=iab_landing&amp;utm_medium=cpm&amp;utm_campaign=web_cyber-wow_renovacion_octubre_2025&amp;utm_id=cyber-wow-movistar&amp;utm_term=awareness&amp;utm_content=anuncio_web_landing_iab_cyber-wow_movistar" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendaonline.movistar.com.pe/Renueva-app-2?utm_source=iab_landing&amp;utm_medium=cpm&amp;utm_campaign=web_cyber-wow_renovacion_octubre_2025&amp;utm_id=cyber-wow-movistar&amp;utm_term=awareness&amp;utm_content=anuncio_web_landing_iab_cyber-wow_movistar" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="Movistar" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/GRmnhWsOjwU78x1zcoDnwj2aMVl7WtEpzg33iMEb.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">Movistar</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.pagoefectivo.la/pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.pagoefectivo.la/pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="PAGOEFECTIVO" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/513L7AneRWaNnc3YRPbAFaP9PdPJw7EHrmymIelf.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">PAGOEFECTIVO</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.falabella.com.pe/falabella-pe" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.falabella.com.pe/falabella-pe" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="FALABELLA" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/2nOS7UFMocfJnd4SXY1XllF58ih3XROJJMqt8qkT.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">FALABELLA</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://hiraoka.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://hiraoka.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="HIRAOKA" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/tn8Kb2QFXlZzXRHfM9yRibtTrt7KHcWYEoeJwyBi.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">HIRAOKA</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://dermotiendashopping.com/cyberdermotienda" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://dermotiendashopping.com/cyberdermotienda" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="DERMOTIENDA SHOPPING" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/X29GQR4dDyYNs1vfADDfNqBardBiblIkxYNKiXsO.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">DERMOTIENDA SHOPPING</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.wong.pe/forms/cyberwong" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.wong.pe/forms/cyberwong" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="WONG" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/AUv9XgLRDB83kmvds400sK3kjo5cuV5Lwrhq2Bcr.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">WONG</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.metro.pe/?gad_source=1&amp;gad_campaignid=15425857609&amp;gbraid=0AAAAADGBOApPwuhme4X0dROdilCtHzRkh&amp;gclid=CjwKCAjwyb3DBhBlEiwAqZLe5Klv17QabO7PlKCZKlRR9DSGXMhNFgjTRsLGC6J8Aq7N8xHbugF_XhoCqGwQAvD_BwE" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.metro.pe/?gad_source=1&amp;gad_campaignid=15425857609&amp;gbraid=0AAAAADGBOApPwuhme4X0dROdilCtHzRkh&amp;gclid=CjwKCAjwyb3DBhBlEiwAqZLe5Klv17QabO7PlKCZKlRR9DSGXMhNFgjTRsLGC6J8Aq7N8xHbugF_XhoCqGwQAvD_BwE" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="METRO.PE" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/TW8B366UTUahOkSuglA4UTur7ZGP7kjh5IicfC8J.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">METRO.PE</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.plazavea.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.plazavea.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="PLAZA VEA" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/JEkgmDHuPZrYyjVusz1Yr8Ar640rIc6DUcDMl3X3.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">PLAZA VEA</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://cassinelli.com/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://cassinelli.com/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="CASSINELLI" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/EsOokcjtLgQuqV9ul3SOlKgqCDaFVq0I0YLSKXou.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">CASSINELLI</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendaclaro.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendaclaro.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="CLARO" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/QWNehybQZaifnQokNZEAc4PaiBxewUkLIp48akcq.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">CLARO</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.nmviajes.com/info/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.nmviajes.com/info/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="NMVIAJES" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/5kyVPJBNkOYiB008vFpdnVFNoWBgtLi472DUSeIT.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">NMVIAJES</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://decorplasonline.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://decorplasonline.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="DECORPLAS" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/gmo5siDu45a9hnVZFBwXhOYDP64gHu8dbxNBkjMh.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">DECORPLAS</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.viajesfalabella.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.viajesfalabella.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="Viajes Falabella" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/h6urnpN4TaKnaIpwIJB3qJWgJ3I4fChRM3LRlt3Z.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">Viajes Falabella</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.prune.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.prune.com.pe/" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="PRUNE" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/bPLQrHMkhUEuS2qWIwfPlH2PYcMeUkYg6fDAWTOU.jpg">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">PRUNE</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.superpet.pe/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.superpet.pe/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="SUPERPET" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/6S2mToQIGTegmPPeK13NXjozKLnlKXxXeY8eMlWJ.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">SUPERPET</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.tiendaepson.com.pe/ofertas?utm_source=webcw&amp;utm_medium=aff&amp;utm_term=&amp;utm_content=botonmarca&amp;utm_campaign=pe-cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.tiendaepson.com.pe/ofertas?utm_source=webcw&amp;utm_medium=aff&amp;utm_term=&amp;utm_content=botonmarca&amp;utm_campaign=pe-cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="EPSON" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/M4js2zrtAacDMbB2lsau81RhAHzQXl4rYBmD4E1v.jpg">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">EPSON</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="http://www.hp.com/pe-es/shop/?utm_source=Referral&amp;utm_medium=Camara&amp;utm_term=&amp;utm_content=&amp;utm_campaign=CyberWow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="http://www.hp.com/pe-es/shop/?utm_source=Referral&amp;utm_medium=Camara&amp;utm_term=&amp;utm_content=&amp;utm_campaign=CyberWow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="HP" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/x1rkIZoogTcyL62loHnfyXp7XUyicM6jkUh0yVlo.jpg">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">HP</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.promart.pe/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://www.promart.pe/cyber-wow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="PROMART" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/VMKm9z58SbNztddy2XdC6DbWTWPRhTpgoXmIv650.png">
                             </div>
                             <span class="font-bourgeois font-medium text-[#FD2B73] text-center leading-none text-[16px] ml:text-lg">PROMART</span>
                         </a>
-                        <a class="cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendamia.com/pe/cyberwow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
+                        <a class="boton_mmgv cursor-pointer bg-cover bg-center bg-white bg-[url('@/shared/assets/images/brand-bg.svg')] flex flex-col justify-between items-center p-4 h-56 ml:h-80 w-44 ml:w-[288px]" href="https://tiendamia.com/pe/cyberwow" target="_blank" style="clip-path: path(&quot;M 20.6749 320 H 288.268 V 309.52 L 288 19.2297 L 267.593 0 L 0 0 V 10.4797 L 0.267949 300.77 L 20.6749 320 Z&quot;); filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);">
                             <div class="relative w-full h-full flex items-center justify-center">
                                 <img alt="TIENDAMIA" class="max-w-full max-h-full object-contain transition-opacity duration-500 opacity-100" src="https://d9873.cyberwow.pe/brands/brand_page/wUheTMcs4Hjxa97WhvouXGqS4DpoAiJW1JQ59G13.png">
                             </div>
