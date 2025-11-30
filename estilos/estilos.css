@@ -1,3 +1,7 @@
+@font-face{
+    font-family: 'Burgeois';
+    src:url('../fuentes/Bourgeois-Bold.otf');
+}
 /* CSS crítico inline para evitar bloqueo de renderización */
 * {
   box-sizing: border-box;
@@ -40,10 +44,7 @@ body {
 .grid{
     justify-items: center;
 }
-@font-face{
-    font-family: 'Burgeois';
-    src:url('../fuentes/Bourgeois-Bold.otf');
-}
+
 .navegador{
     display: flex;
     justify-content: space-between;
