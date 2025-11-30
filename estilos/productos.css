@@ -9,6 +9,7 @@ body{
 }
 header{
     background: #fff;
+    height: 20dvh;
 }
 nav{
     display:flex;
@@ -41,4 +42,25 @@ a{
 .segundo_nav{
     display: flex;
     justify-content: space-evenly;
+    height: 50px;
+}
+.producto{
+    display: flex;
+    width: 50%;
+}
+.carousel{
+    background: gray;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.carousel_small{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+.carousel-item{
+    width: 100%;
 }
