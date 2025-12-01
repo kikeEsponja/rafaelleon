@@ -46,21 +46,78 @@ a{
 }
 .producto{
     display: flex;
-    width: 50%;
+    width: 100%;
+    justify-content: space-around;
 }
 .carousel{
     background: gray;
-    width: 60%;
+    border-radius: 10px;
+    width: 40%;
+    /*height: 70dvh;*/
     display: flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    overflow: hidden;
+}
+.carousel-inner{
+    width: 100%;
 }
 .carousel_small{
-    width: 15%;
+    width: 25%;
+}
+.carousel_small-inner{
+    width: 100%;
+    height: 60dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    background: #fff;
 }
-.carousel-item{
-    width: 100%;
+.carousel_small-item{
+    margin: 15%;
+}
+.carousel_small-control-prev, .carousel_small-control-next{
+    position: absolute;
+    top: 0;
+    bottom: 40%;
+    left: 0px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    font-size: 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    filter: var(--bs-carousel-control-icon-filter);
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+.carousel_small-control-next{
+    left: 0px;
+    top:85%;
+}
+aside{
+    width: 55%;
+}
+.disponibles{
+    width: 55%;
+    display: flex;
+    justify-items: flex-start;
+    margin: 1%;
+}
+.sumar-restar-carrito{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.botones-suma-resta{
+    display: flex;
+    justify-content: center;
+}
+.botones-suma-resta > h4{
+    margin: 0;
 }
