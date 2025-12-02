@@ -107,12 +107,13 @@ aside{
     width: 55%;
     display: flex;
     justify-items: flex-start;
-    margin: 1%;
+    border: 0.5px solid #000;
+    border-radius: 10px;
 }
 .sumar-restar-carrito{
     display: flex;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .botones-suma-resta{
     display: flex;
@@ -120,4 +121,27 @@ aside{
 }
 .botones-suma-resta > h4{
     margin: 0;
+}
+.botones-suma-resta > button{
+    width: 50px;
+}
+/******************************************CARRITO***************************************************/
+.carrito{
+    display: flex;
+    justify-content: space-around;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+thead th{
+    background: #f3f3f3;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+}
+tbody td{
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
 }

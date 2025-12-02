@@ -48,7 +48,7 @@
                 	  <img src="../imagenes/productos/cel_2.webp" class="d-block w-100" alt="...">
                 	</div>
                 	<div class="carousel_small-item">
-                	  <img src="../imagenes/productos/cel_3.webp" class="d-block w-100" alt="...">
+                	  <img src="../imagenes/productos/cel_3.jpg" class="d-block w-100" alt="...">
                 	</div>
                 	<div class="carousel_small-item active">
                 	  <img src="../imagenes/productos/cel_4.png" class="d-block w-100" alt="...">
@@ -74,7 +74,7 @@
                       <img src="../imagenes/productos/cel_2.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_3.webp" class="d-block w-100" alt="...">
+                      <img src="../imagenes/productos/cel_3.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                       <img src="../imagenes/productos/cel_4.png" class="d-block w-100" alt="...">
@@ -106,17 +106,18 @@
         	    </ul>
         	    <h1>Precio Oferta</h1>
         	    <p>precio regular</p>
-				<div class="btn btn-outline-dark disponibles"><p>Disponibles: <span id="disponibles"></span></p></div>
+				<div class="disponibles"><p>Disponibles: <span id="disponibles"></span></p></div>
+				<br>
         	    <div class="sumar-restar-carrito">
 					<div class="cantidad">
 						<span>Cantidad</span>
 						<div class="btn btn-outline-danger botones-suma-resta">
-        	        		<button>-</button>
-        	        		<h4>0</h4>
-        	        		<button>+</button>
+        	        		<button id="resta">-</button>
+        	        		<h4 id="cantidad_de_productos">0</h4>
+        	        		<button id="suma">+</button>
 						</div>
 					</div>
-					<button class="btn btn-danger agregar">Agregar al carrito</button>
+					<button class="btn btn-danger agregar" id="agregar-carrito">Agregar al carrito</button>
         	    	<button class="btn btn-outline-danger agregar"><i class="bi bi-heart"></i> Agregar a favoritos</button>
         	    </div>
 
@@ -136,5 +137,6 @@
         <div class="logo"></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+	<script src="../funcionalidades/app.js"></script>
 </body>
 </html>
