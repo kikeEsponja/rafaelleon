@@ -12,28 +12,28 @@
 <body>
     <header>
         <nav>
-            <img src="../imagenes/logo-hiraoka-desktop.webp" alt="logo">
-            <button class="categs"><i class="bi bi-list"></i> Categorías</button>
+            <img src="../imagenes/logo-hiraoka-desktop.webp" alt="logo" class="logo">
+            <button class="categs desaparecer"><i class="bi bi-list"></i> Categorías</button>
             <div class="relative">
-                
-                <input type="text" placeholder="Buscador" class="pl-10 pr-4 py-2 border border-gray-300 rounded w-full">
+                <input type="text" placeholder="Buscador" class="buscador">
                 <i class="bi bi-search absolute top-1/2 -translate-y-1/2 text-gray-400"></i>
             </div>
-            
-            <a href=""><i class="bi bi-person"></i> Ingresa</a>
-            <a href=""><i class="bi bi-journal-check"></i> Crear cuenta</a>
-            <a href=""><i class="bi bi-cart"></i> Mi carrito</a>
+            <div class="contenedor_iconos">
+                <a href=""><i class="bi bi-person"></i><span class="desaparecer_700"> Nuestras tiendas</span></a>
+                <a href=""><i class="bi bi-journal-check"></i><span class="desaparecer_700"> Catálogo</span></a>
+                <a href=""><i class="bi bi-cart"></i><span class="desaparecer_700"> Mi carrito</span></a>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="segundo_nav">
+        <!--<div class="segundo_nav">
             <a href="">Nuestras tiendas</a>
             <a href="">Blog</a>
             <a href="">Catálogo</a>
             <a href="">Black Friday</a>
             <a href="">Teléfono</a>
             <a href="">OKA</a>
-        </div>
+        </div>-->
         <div class="producto">
             <!--<div id="carouselSmallExample" class="carousel_small slide">
                 <button class="carousel_small-control-prev" type="button" data-bs-target="#carouselSmallExample" data-bs-slide="prev">
@@ -68,59 +68,71 @@
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="../imagenes/productos/cel_1.jpg" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_1.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_2.webp" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_2.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_3.jpg" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_3.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_4.png" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_4.png" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_5.jpg" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_5.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                      <img src="../imagenes/productos/cel_6.png" class="d-block w-100" alt="...">
+                    	<img src="../imagenes/productos/cel_6.png" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                	<span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+                	<span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                	<span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+                	<span class="visually-hidden">Next</span>
                 </button>
             </div>
         	<aside>
         	    <h4>Producto</h4>
         	    <h4>Modelo</h4>
-        	    <ul>
+        	    <ul class="caracteristicas">
         	        <li>característica 1</li>
         	        <li>característica 2</li>
         	        <li>característica 3</li>
         	        <li>característica 4</li>
         	    </ul>
-        	    <h1>Precio Oferta</h1>
-        	    <p>precio regular</p>
-				<div class="disponibles"><p>Disponibles: <span id="disponibles"></span></p></div>
+				<p>Código C356407251201</p>
+				<div class="contenedor_precio_online">
+					<h5 class="precio_online">PRECIO ONLINE</h5>
+					<h1> S/ 1,299.00</h1>
+				</div>
+        	    <p>precio regular <span>S/ 1,999.00</span></p>
+				    <div class="disponibles"><p>Disponibles: <span id="disponibles"></span></p></div>
 				<br>
         	    <div class="sumar-restar-carrito">
 					<div class="cantidad">
 						<span>Cantidad</span>
 						<div class="btn btn-outline-danger botones-suma-resta">
-        	        		<button id="resta">-</button>
-        	        		<h4 id="cantidad_de_productos">0</h4>
-        	        		<button id="suma">+</button>
+        	    			<button id="resta">-</button>
+        	    			<h4 id="cantidad_de_productos">0</h4>
+        	    			<button id="suma">+</button>
 						</div>
 					</div>
-					<button class="btn btn-danger agregar" id="agregar-carrito">Agregar al carrito</button>
-        	    	<button class="btn btn-outline-danger agregar"><i class="bi bi-heart"></i> Agregar a favoritos</button>
+					<button class="btn btn-danger agregar" id="agregar-carrito"><i class="bi bi-cart desaparecer"></i><span class="desaparecer_700"> Agregar al carrito</span></button>
+        	    	<button class="btn btn-outline-danger agregar"><i class="bi bi-heart desaparecer"></i><span class="desaparecer_700"> Agregar a favoritos</span></button>
         	    </div>
-
+                <br>
+                <h5>Comparte este producto</h5>
+                <div class="contenedor_redes">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-google"></i>
+                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-pinterest"></i>
+                </div>
         	</aside>
         </div>
         <section>

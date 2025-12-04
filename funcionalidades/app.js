@@ -22,27 +22,31 @@ let contadorDisp = document.getElementById('disponibles');
 contadorDisp.textContent = numDisp;
 
 let botonResta = document.getElementById('resta');
-botonResta.setAttribute('disabled', null);
+botonResta.setAttribute('disabled', null); // anula el botón resta al cargar el documento
+let botonSuma = document.getElementById('suma');
+
 botonResta.addEventListener('click', function(){
 	click = click - 1;
 	contador.textContent = click;
     numDisp = numDisp + 1;
     contadorDisp.textContent = numDisp;
+
     if(numDisp === 6){
         botonResta.setAttribute('disabled', null);
         botonSuma.removeAttribute('disabled', null);
     }
 });
 
-let botonSuma = document.getElementById('suma');
+
 botonSuma.addEventListener('click', function(){
+    botonResta.removeAttribute('disabled', null); // activa el botón resta al iniciar la suma de artículos
 	click = click + 1;
 	contador.textContent = click;
     numDisp = numDisp - 1;
     contadorDisp.textContent = numDisp;
     if(numDisp === 0){
         botonSuma.setAttribute('disabled', null);
-        botonResta.removeAttribute('disabled', null);
+        //botonResta.removeAttribute('disabled', null);
     }
 });
 //-------------------------------CARRITO---------------------------------------------------
