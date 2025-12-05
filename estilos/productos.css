@@ -173,16 +173,16 @@ ul li::marker{
 .contenedor_ficha{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 .ficha{
     display: flex;
     justify-content: space-evenly;
-    width: 45%; /* CAMBIAR A PIXELES PARA EFECTO WRAP*/
-    border: 1px solid #000;
+    width: 100%; /* CAMBIAR A PIXELES PARA EFECTO WRAP*/
 }
 .contenedor_caracteristicas{
     margin: 2%;
+    border: 1px solid #000;
+    width: 100%;
 }
 .contenedor_caracteristicas > div{
     display: flex;
@@ -209,9 +209,9 @@ ul li::marker{
   	border: 2px solid white;
   	border-radius: 0px 15px 0px 15px;
   	width: 250px;
-	height: 150px;
   	margin: 1%;
   	text-decoration: none;
+    justify-content: center;
   	text-align: center;
     align-items: center;
   	color: #FD2B73;
@@ -282,18 +282,24 @@ ul li::marker{
         flex-direction: column;
         align-items: center;
     }
+    .contenedor_caracteristicas{
+        margin: 1%;
+    }
     
 }
 @media(max-width: 600px){
 	nav{
         flex-direction: column;
     }
-
     .carousel, aside{
         width: 80%;
     }
     .precio_online{
         width: 25%;
+    }
+    .ficha{
+        flex-direction: column;
+        width: 90%;
     }
 
 }
