@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Burgeois';
-    src:url('../fuentes/Bourgeois-Bold.otf');
+    src:url('../fuentes/Bourgeois-Bold.otf')
 }
 * {
 	box-sizing: border-box;
@@ -96,6 +96,9 @@ header > img{
 	width: 25%;
 	border-radius: 5px;
 }
+.boton_mmgv > div > h2{
+	font-size: 25px;
+}
 .campo_buscar{
   	width: 350px;
   	height: 40px;
@@ -140,7 +143,7 @@ footer > div{
 }
 @media(max-width: 1300px){
 	.boton_mmgv{
-    	width: 15%;
+    	width: 20%;
   	}
 }
 @media(max-width: 1200px){
@@ -150,9 +153,9 @@ footer > div{
 	.participa_hamb{
 		width: 80%;
 	}
-  	.boton_mmgv{
-    	width: 20%;
-  	}
+	.precio_online{
+		width: 30%;
+	}
 }
 @media(max-width: 800px){
 	.mobile{
@@ -184,6 +187,17 @@ footer > div{
 	.escritorio{
     	display: none;
   	}
+	.boton_mmgv{
+		width: 25%;
+	}
+	.precio_online{
+		width: 35%;
+	}
+}
+@media(max-width: 700px){
+	.boton_mmgv{
+		width: 30%;
+	}
 }
 @media(max-width: 600px){
 	.buscador{
@@ -191,6 +205,17 @@ footer > div{
 	}
 	.boton_mmgv{
 		width: 30%;
+	}
+	.boton_mmgv > div > h2{
+		font-size: 23px;
+	}
+	.precio_online{
+		font-size: 12px;
+	}
+}
+@media(max-width: 550px){
+	.boton_mmgv{
+		width: 40%;
 	}
 }
 @media(max-width: 450px){
@@ -208,6 +233,15 @@ footer > div{
 		flex-direction: column;
 	}
 	.boton_mmgv{
-		width: 35%;
+		width: 45%;
+	}
+}
+@media(max-width: 360px){
+	.boton_mmgv > div{
+		flex-direction: column;
+		align-items: center;
+	}
+	.boton_mmgv{
+		width: 47%;
 	}
 }

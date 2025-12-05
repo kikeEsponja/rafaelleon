@@ -161,7 +161,8 @@ ul li::marker{
     display: flex;
     justify-content: space-around;
 }
-table{
+/*table{
+    display: flex;
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -176,17 +177,65 @@ tbody td{
     padding: 10px;
     border-bottom: 1px solid #e5e5e5;
 }
-@media(max-width: 1100px){
+th, td{
+    display: flex;
+    flex-direction: column;
+    width: 300%;
+}
+thead, tbody{
+    width: 45%;
+}*/
+.contenedor_grande{
+    background: #eee;
+    padding: 0 0 1% 0;
+}
+.contenedor_grande > h2{
+    background: #888;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+.contenedor_ficha{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.ficha{
+    display: flex;
+    justify-content: space-evenly;
+    width: 45%; /* CAMBIAR A PIXELES PARA EFECTO WRAP*/
+    border: 1px solid #000;
+}
+@media(max-width: 1300px){
 	.desaparecer{
         display: none;
     }
 }
-@media(max-width: 1000px){
+@media(max-width: 1170px){
+	.desaparecer{
+        display: none;
+    }
+    aside{
+        width: 45%;
+    }
+    
+}
+@media(max-width: 1050px){
     .logo{
         width: 30%;
     }
     .carousel{
         width: 55%;
+    }
+    .cantidad{
+        width: 25%;
+    }
+    header{
+        height: 10dvh;
+    }
+}
+@media(max-width: 960px){
+    .cantidad{
+        width: 20%;
     }
 }
 @media(max-width: 900px){
@@ -198,27 +247,36 @@ tbody td{
     .carousel{
         width: 65%;
     }
+    .desaparecer_700{
+        display: none;
+    }
+    .desaparecer{
+        display: block;
+    }
+    .cantidad, .agregar{
+        width: 30%;
+    }
 }
 @media(max-width: 800px){
     .carousel{
         width: 60%;
-        height: 75dvh;
     }
 }
 @media(max-width: 700px){
-    .carousel{
-        width: 50%;
-        height: 50%;
-    }
-}
-@media(max-width: 600px){
-	nav{
-        flex-direction: column;
+    .carousel, aside{
+        width: 80%;
     }
     .producto{
         flex-direction: column;
         align-items: center;
     }
+    
+}
+@media(max-width: 600px){
+	nav{
+        flex-direction: column;
+    }
+
     .carousel, aside{
         width: 80%;
     }

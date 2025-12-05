@@ -16,7 +16,7 @@ if(menu){
 //-------------------------------CONTADOR-----------------------------------------------------
 let click = 0;
 let contador = document.getElementById('cantidad_de_productos');
-let numDisp = 6;
+let numDisp = 4;
 
 let contadorDisp = document.getElementById('disponibles');
 contadorDisp.textContent = numDisp;
