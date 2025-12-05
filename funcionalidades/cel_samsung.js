@@ -22,7 +22,7 @@ if(menu){
 //-------------------------------CONTADOR-----------------------------------------------------
 let click = 0;
 let contador = document.getElementById('cantidad_de_productos');
-let numDisp = 4;
+let numDisp = 6;
 
 let contadorDisp = document.getElementById('disponibles');
 contadorDisp.textContent = numDisp;
@@ -37,7 +37,7 @@ botonResta.addEventListener('click', function(){
     numDisp = numDisp + 1;
     contadorDisp.textContent = numDisp;
 
-    if(numDisp === 4){
+    if(numDisp === 6){
         botonResta.setAttribute('disabled', null);
         botonSuma.removeAttribute('disabled', null);
     }

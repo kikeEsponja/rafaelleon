@@ -161,30 +161,6 @@ ul li::marker{
     display: flex;
     justify-content: space-around;
 }
-/*table{
-    display: flex;
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-thead th{
-    background: #f3f3f3;
-    padding: 12px;
-    text-align: left;
-    border-bottom: 2px solid #ccc;
-}
-tbody td{
-    padding: 10px;
-    border-bottom: 1px solid #e5e5e5;
-}
-th, td{
-    display: flex;
-    flex-direction: column;
-    width: 300%;
-}
-thead, tbody{
-    width: 45%;
-}*/
 .contenedor_grande{
     background: #eee;
     padding: 0 0 1% 0;
@@ -204,6 +180,42 @@ thead, tbody{
     justify-content: space-evenly;
     width: 45%; /* CAMBIAR A PIXELES PARA EFECTO WRAP*/
     border: 1px solid #000;
+}
+.contenedor_caracteristicas{
+    margin: 2%;
+}
+.contenedor_caracteristicas > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.contenedor_caracteristicas > div > .clave, p{
+    width: 50%;
+}
+.contenedor_caracteristicas > div:nth-child(even), .contenedor_caracteristicas > div:nth-child(even){
+    background: #fff;
+}
+.mapa{
+    justify-self: center;
+    padding: 1%;
+}
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.galeria div{
+    display: flex;
+  	border: 2px solid white;
+  	border-radius: 0px 15px 0px 15px;
+  	width: 250px;
+	height: 150px;
+  	margin: 1%;
+  	text-decoration: none;
+  	text-align: center;
+    align-items: center;
+  	color: #FD2B73;
+  	background: #fff;
 }
 @media(max-width: 1300px){
 	.desaparecer{

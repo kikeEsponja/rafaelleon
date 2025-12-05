@@ -77,7 +77,8 @@ header > img{
   	border: 2px solid white;
   	cursor: pointer;
   	border-radius: 0px 15px 0px 15px;
-  	width: 200px;
+  	width: 250px;
+	height: 525px;
   	margin: 1%;
   	text-decoration: none;
   	text-align: center;
@@ -89,6 +90,7 @@ header > img{
 }
 .boton_mmgv > div{
 	display: flex;
+	justify-content: center;
 }
 .precio_online{
 	background: #fd223f;
@@ -98,6 +100,11 @@ header > img{
 }
 .boton_mmgv > div > h2{
 	font-size: 25px;
+}
+.boton_mmgv > h4{
+	font-size: 20px;
+	color: #000;
+	height: 75px;
 }
 .campo_buscar{
   	width: 350px;
