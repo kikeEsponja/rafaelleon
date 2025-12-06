@@ -93,7 +93,6 @@ header > img{
 }
 .boton_mmgv, .participa_hamb{
   	display: block;
-  	cursor: pointer;
   	border-radius: 0px 15px 0px 15px;
   	width: 250px;
 	height: 525px;
@@ -103,7 +102,7 @@ header > img{
   	color: #FD2B73;
   	background: #fff;
 }
-.boton_mmgv > img{
+.boton_mmgv > a > img{
   	width: 85%;
 }
 .boton_mmgv > div{
@@ -192,6 +191,13 @@ footer > div{
 	.boton_mmgv > div > h2{
 		width: 70%;
 		font-size: 23px;
+	}
+	.boton_mmgv > div{
+		margin: 2%;
+	}
+	.boton_mmgv > h4{
+		font-size: 18px;
+		margin: 1%;
 	}
 }
 @media(max-width: 800px){
