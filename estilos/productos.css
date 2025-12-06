@@ -242,7 +242,7 @@ ul li::marker{
         width: 25%;
     }
     header{
-        height: 20dvh;
+        height: 25dvh;
     }
 }
 @media(max-width: 960px){
