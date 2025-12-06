@@ -13,15 +13,34 @@ body {
   	background: #efeff0;
 }
 header{
-  	background: #fd2b73;
+  	/*background: #fd2b73;*/
+	background: #fff;
 }
 header > img{
   	height: 300px;
   	width: 100%;
 }
+.carousel{
+	position: fixed;
+	width: 100%;
+}
+.carousel-item{
+	background: #c72029;
+	height: 40px;
+}
+.banner{
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 400;
+	color: #fff;
+}
+.span{
+	color: #ff0;
+}
 .links{
   	text-decoration: none;
-  	color: #fff;
+  	color: #000;
 }
 .link_logo{
   	border-radius: 30px;
@@ -74,7 +93,6 @@ header > img{
 }
 .boton_mmgv, .participa_hamb{
   	display: block;
-  	border: 2px solid white;
   	cursor: pointer;
   	border-radius: 0px 15px 0px 15px;
   	width: 250px;
@@ -86,7 +104,7 @@ header > img{
   	background: #fff;
 }
 .boton_mmgv > img{
-  	width: 95%;
+  	width: 85%;
 }
 .boton_mmgv > div{
 	display: flex;
@@ -120,7 +138,7 @@ header > img{
 .participa{
   	height: 50px;
   	background: transparent;
-  	color: #fff;
+  	color: #000;
 }
 .participa_hamb{
 	width: 100%;
@@ -153,8 +171,10 @@ footer > div{
     	width: 20%;
   	}
 }
-@media(max-width: 1200px){
-
+@media(max-width: 1050px){
+	.banner{
+		font-size: 15px;
+	}
 }
 @media(max-width: 1000px){
 	.participa_hamb{
@@ -165,10 +185,24 @@ footer > div{
 		width: 30%;
 	}
 }
+@media(max-width: 940px){
+	.boton_mmgv{
+		width: 23%;
+	}
+	.boton_mmgv > div > h2{
+		width: 70%;
+		font-size: 23px;
+	}
+}
 @media(max-width: 800px){
+	.banner{
+		font-size: 100%;
+	}
 	.mobile{
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
+		height: 155px;
 	}
 	.boton_mobile{
 		font-size: 30px;
@@ -196,7 +230,7 @@ footer > div{
     	display: none;
   	}
 	.boton_mmgv{
-		width: 25%;
+		width: 30%;
 	}
 	.precio_online{
 		width: 35%;
@@ -206,16 +240,16 @@ footer > div{
 	.boton_mmgv{
 		width: 30%;
 	}
+	.boton_mmgv > h4{
+		margin-bottom: 1.5rem;
+	}
 }
-@media(max-width: 600px){
+@media(max-width: 615px){
 	.buscador{
 		flex-direction: column;
 	}
-	.boton_mmgv{
-		width: 30%;
-	}
 	.boton_mmgv > div > h2{
-		font-size: 23px;
+		font-size: 20px;
 	}
 	.precio_online{
 		font-size: 12px;
