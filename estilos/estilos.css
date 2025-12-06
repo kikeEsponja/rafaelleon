@@ -159,6 +159,7 @@ footer > div{
 @media(max-width: 1000px){
 	.participa_hamb{
 		width: 80%;
+		height: 50px;
 	}
 	.precio_online{
 		width: 30%;
