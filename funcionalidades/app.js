@@ -1,40 +1,74 @@
-const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('mobileMenu');
 let inicio = document.getElementById('logo');
 
-/*inicio.style.cursor = 'pointer';
+inicio.style.cursor = 'pointer';
 inicio.addEventListener('click', () =>{
     window.location.href = '../index.html';
-});*/
+});
+//-------------------------------CONTADOR-----------------------------------------------------
+let click = 0;
+let contador = document.getElementById('cantidad_de_productos');
 
-if(btn){
-    btn.addEventListener('click', ()=>{
-        menu.classList.toggle('hidden');
-    });
-}
+let numDisp = producto.cantidad;
+let numInicial = producto.cantidad;
 
-if(menu){
-    menu.addEventListener('click', (e)=>{
-        if(e.target === menu) menu.classList.add('hidden');
-    });
-}
-//-------------------------------CARRITO---------------------------------------------------
-let agregarCarrito = document.getElementById('agregar-carrito');
-let compras = document.getElementById('compras');
-let carrito =  document.getElementById('carrito');
-let contador = 0;
+let contadorDisp = document.getElementById('disponibles');
+contadorDisp.textContent = numDisp;
 
-let addCar = document.getElementById('add-car');
-addCar.addEventListener('click', () =>{
-    contador = contador + 1;
-    compras.textContent = contador;
+let botonResta = document.getElementById('resta');
+botonResta.setAttribute('disabled', true); // anula el botón resta al cargar el documento
+let botonSuma = document.getElementById('suma');
+
+botonResta.addEventListener('click', function(){
+	click = click - 1;
+	contador.textContent = click;
+    numDisp = numDisp + 1;
+    contadorDisp.textContent = numDisp;
+
+    if(click === 0){
+        botonResta.setAttribute('disabled', true);
+        //botonSuma.removeAttribute('disabled', null);
+    }
+    if(numDisp > 0){
+        botonSuma.removeAttribute('disabled');
+    }
 });
 
-carrito.addEventListener('click', () => {
-    if(contador > 0){
-        window.location.href = './vistas/carrito.html';
-    }else{
-        alert('agrega un producto');
+
+botonSuma.addEventListener('click', function(){
+    botonResta.removeAttribute('disabled'); // activa el botón resta al iniciar la suma de artículos
+	click = click + 1;
+	contador.textContent = click;
+    numDisp = numDisp - 1;
+    contadorDisp.textContent = numDisp;
+    if(numDisp === 0){
+        botonSuma.setAttribute('disabled', null);
     }
-    
+});
+//-------------------------------CARRITO---------------------------------------------------
+const botonAgregar = document.getElementById('agregar-carrito');
+
+botonAgregar.addEventListener('click', () =>{
+    let cantidadElegida = click;
+
+    if(cantidadElegida <= 0){
+        alert('agrega un producto');
+        return;
+    }
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    const existente = carrito.find(p => p.id === producto.id);
+
+    if(existente){
+        existente.cantidad += cantidadElegida
+    }else{
+        carrito.push({
+            ...producto,
+            cantidad: cantidadElegida
+        });
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    alert('añadido');
 });

@@ -49,7 +49,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="./vistas/nuestras-tiendas.html" class="links text-light">Nuestras Tiendas</a></li>
                   <li><a href="./vistas/tips.html" class="links text-light">Tips y recomendaciones</a></li>
-                  <li><button class="participa_hamb">Participa con tu marca aquí</button></li>
+                  <li><button class="participa_hamb" id="m_carrito"><i class="bi bi-cart"></i> Mi carrito: <span id="m_compras"></span></button></li>
                 </ul>
             </div>
         </nav>
@@ -65,19 +65,9 @@
             </div>
         </div>
         
-        <section class="grilla">
-            <div class="boton_mmgv">
-                <a href="./vistas/celulares_apple.html"><img src="./imagenes/productos/celulares/apple/iphone16_pro_max_01.webp" alt="celular"></a>
-                <h4>iPhone 16 Pro Max 256GB Titanio Natural</h4>
-                <p>Código 134389</p>
-                <div>
-                    <h6 class="precio_online">PRECIO ONLINE</h6>
-                    <h2> S/ 5,499.00</h2>
-                </div>
-                <p>Precio regular</p>
-                <p>S/ 7,599.00</p>
-                <hr>
-                <button class="agregar_al_carro_item" id="add-car">Añadir al carro</button>
+        <section class="grilla" id="lista-productos">
+            <div></div>
+            <!--<div class="boton_mmgv">
             </div>
             <div class="boton_mmgv">
                 <a  href="./vistas/audio.html"><img src="./imagenes/productos/audio/wh-1000xm6-b_01.webp" alt="celular"></a>
@@ -221,7 +211,7 @@
                 <p>S/ 799.00</p>
                 <hr>
                 <button class="agregar_al_carro_item">Añadir al carro</button>
-            </div>
+            </div>-->
         </section>
     </main>
     <footer>
@@ -290,6 +280,18 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="./funcionalidades/app.js"></script>
+    <script>
+        let cart = document.getElementById('carrito');
+        cart.addEventListener('click', () =>{
+            window.location.href = './vistas/carrito.html';
+        });
+        
+        let mcart = document.getElementById('m_carrito');
+        mcart.addEventListener('click', () =>{
+            window.location.href = './vistas/carrito.html';
+        });
+    </script>
+    <script src="./funcionalidades/data.js"></script>
+    <script src="./funcionalidades/index.js"></script>
 </body>
 </html>

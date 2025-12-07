@@ -8,55 +8,135 @@
     <link rel="stylesheet" href="../estilos/productos.css">
     <link rel="icon" href="../imagenes/hiraoka_icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>productos</title>
+    <title>carrito</title>
+    <style>
+        .modal-body{
+            text-align: center;
+        }
+        .modal-body > i{
+            font-size: 150px;
+            color: #FD2B73;
+        }
+        .contenedor-resumen{
+            width: 24%;
+        }
+        .tabla, .resumen{
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+        .contenedor-tablas{
+            display: flex;
+            justify-content: space-around;
+        }
+        .tabla{
+            width: 74%;
+        }
+        .resumen{
+            width: 30%;
+            height: 200px;
+            position: fixed;
+        }
+        @media(max-width: 1110px){
+            .tabla{
+                width: 68%;
+            }
+            .resumen{
+                width: 25%;
+            }
+        }
+        @media(max-width: 700px){
+            .tabla{
+                width: 68%;
+            }
+            .contenedor-resumen{
+                width: 30%;
+            }
+            .resumen{
+                width: 30%;
+            }
+        }
+        @media(max-width: 540px){
+            .tabla{
+                width: 60%;
+            }
+            .contenedor-resumen{
+                width: 35%;
+            }
+            .resumen{
+                width: 35%;
+            }
+        }        
+        @media(max-width: 420px){
+            .contenedor-tablas{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .contenedor-tablas > div{
+                margin: 1%;
+            }
+            .tabla{
+                width: 80%;
+            }
+            .contenedor-resumen{
+                width: 80%;
+            }
+            .resumen{
+                position: relative;
+                justify-self: center;
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <img src="../imagenes/logo-hiraoka-desktop.webp" alt="logo" id="logo-back">
-            <button class="categs"><i class="bi bi-list"></i> Categorías</button>
+            <img src="../imagenes/logo-hiraoka-desktop.webp" alt="logo" class="logo" id="logo-back">
+            <button class="categs desaparecer_700"><i class="bi bi-list"></i> Categorías</button>
             <div class="relative">
-                
-                <input type="text" placeholder="Buscador" class="pl-10 pr-4 py-2 border border-gray-300 rounded w-full">
+                <input type="text" placeholder="Buscador" class="buscador">
                 <i class="bi bi-search absolute top-1/2 -translate-y-1/2 text-gray-400"></i>
             </div>
-            
-            <a href=""><i class="bi bi-person"></i> Ingresa</a>
-            <a href=""><i class="bi bi-journal-check"></i> Crear cuenta</a>
-            <a href=""><i class="bi bi-cart"></i> Mi carrito</a>
+            <div class="contenedor_iconos">
+                <a href="./nuestras-tiendas.html"><i class="bi bi-person"></i><span class="desaparecer_700"> Nuestras tiendas</span></a>
+                <a href=""><i class="bi bi-journal-check"></i><span class="desaparecer_700"> Catálogo</span></a>
+            </div>
         </nav>
     </header>
     <main class="carrito">
-        <section class="tabla">
-            <table>
-                <thead>
-                    <tr>
-                        <th><span>Artículo</span></th>
-                        <th><span>Cantidad</span></th>
-                        <th><span>Precio</span></th>
-                        <th><span>Subtotal</span></th>
-                        <th><span>Acciones</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CELULAR</td>
-                        <td>3</td>
-                        <td>1000</td>
-                        <td>3000</td>
-                        <td>eliminar</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="resumen">
-            <div>
-                <h2>Resumen</h2>
-                <h5><span id="productos"></span> Productos</h5>
-                <h4>Total: <span id="total"></span></h4>
-                <button id="comprar">Comprar</button>
+        <!-- Button trigger modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ya casi es tuyo!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Escanear código</h6>
+                        <i class="bi bi-qr-code"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="contenedor-tablas">
+            <div id="carrito-contenido" class="tabla"></div>
+
+            <div class="contenedor-resumen">
+                <div id="resumen" class="resumen">
+                    <h2>Resumen</h2>
+                    <h5><span id="total_productos"></span> Productos</h5>
+                    <h4>Total: <span id="total_total"></span></h4>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="comprar">Comprar</button>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div></div>
@@ -70,5 +150,7 @@
             window.location.href = '../index.html';
         });
     </script>
+    <script src="../funcionalidades/data.js"></script>
+    <script src="../funcionalidades/carrito.js"></script>
 </body>
 </html>
