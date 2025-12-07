@@ -1,6 +1,13 @@
 const contenedor = document.getElementById('carrito-contenido');
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+function formatoMoneda(num){
+    return num.toLocaleString('es-PE', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+}
+
 function mostrarCarrito(){
     let botonCompra = document.getElementById('comprar');
     botonCompra.setAttribute('disabled', true);
@@ -17,7 +24,7 @@ function mostrarCarrito(){
         html += `
         <div class="item-carrito">
             <h3>${item.nombre}</h3>
-            <p>Precio: S/ ${item.precio}</p>
+            <p>Precio: S/ ${formatoMoneda(item.precio)}</p>
             <p>Cantidad: ${item.cantidad}</p>
             <button class="del" data-id="${item.id}">Eliminar</button>
         </div>
@@ -35,7 +42,7 @@ function actualizarCarrito(){
 
     document.getElementById('total_productos').textContent = totalProductos;
 
-    document.getElementById('total_total').textContent = 'S/ ' + totalPrecio;
+    document.getElementById('total_total').textContent = 'S/ ' + formatoMoneda(totalPrecio);
 }
 
 mostrarCarrito();
@@ -43,7 +50,7 @@ actualizarCarrito();
 
 document.addEventListener('click', e => {
     if(e.target.classList.contains('del')){
-        const id = parseInt(e.target.dataset.id);
+        const id = parseFloat(e.target.dataset.id);
 
         carrito = carrito.filter(p => p.id !== id);
 
@@ -52,4 +59,11 @@ document.addEventListener('click', e => {
         mostrarCarrito();
         actualizarCarrito();
     }
+});
+
+document.getElementById('vaciar').addEventListener('click', () =>{
+    localStorage.removeItem('carrito');
+    carrito = [];
+    mostrarCarrito();
+    actualizarCarrito();
 });

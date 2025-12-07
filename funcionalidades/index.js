@@ -1,19 +1,27 @@
 const lista = document.getElementById('lista-productos');
+
+function formatoMoneda(num){
+    return num.toLocaleString('es-PE', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+}
+
 function mostrarProductos(){
     let html = "";
 
     productos.forEach(prod =>{
         html += `
-        <div class="boton_mmgv">
+        <div class="boton_mmgv product">
             <a href="${prod.direcc}?id=${prod.id}"><img src="${prod.imagen}"></a>
             <h4>${prod.nombre}</h4>
             <p>Código ${prod.codigo}</p>
             <div>
                 <h6 class="precio_online">PRECIO ONLINE</h6>
-                <h2> S/ ${prod.precio}</h2>
+                <h2> S/ ${formatoMoneda(prod.precio)}</h2>
             </div>
             <p>Precio regular</p>
-            <p>Precio: S/ ${prod.precio}</p>
+            <p>Precio: S/ ${prod.precio_reg}</p>
             <hr>
             <button class="add-car agregar_al_carro_item" data-id="${prod.id}">Agregar al carro</button>
         </div>
