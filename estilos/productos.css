@@ -335,7 +335,7 @@ ul li::marker{
 }
 @media(max-width: 400px){
     header{
-        height:30dvh;
+        height:35dvh;
     }
 }
 @media(max-width: 390px){
