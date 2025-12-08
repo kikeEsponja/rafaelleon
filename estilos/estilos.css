@@ -44,7 +44,7 @@ header > img{
 }
 .link_logo{
   	border-radius: 30px;
-  	background: aliceblue;
+  	/*background: aliceblue;*/
   	width: 220px;
 	display: flex;
 }

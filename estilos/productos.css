@@ -16,6 +16,9 @@ nav{
     justify-content:space-between;
     align-items: center;
 }
+.contenedor_iconos{
+    display: contents;
+}
 a{
     text-decoration: none;
     color: #000;
@@ -39,16 +42,11 @@ a{
 .bi-search{
     left:90%;
 }
-/*.segundo_nav{
-    display: flex;
-    justify-content: space-evenly;
-    height: 50px;
-}*/
 main{
     padding: 2%;
 }
 .logo{
-    width: 25%;
+    width: 15%;
 }
 .producto{
     display: flex;
@@ -59,7 +57,7 @@ main{
     background: gray;
     border-radius: 10px;
     width: 60%;
-    height: 90dvh;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,21 +226,18 @@ ul li::marker{
     }
 }
 @media(max-width: 1170px){
-    /*.carousel{
-        height: 75dvh;
-    }*/
 	.desaparecer{
         display: none;
     }
     aside{
         width: 45%;
     }
+    .agregar{
+        font-size: 0.9rem;
+    }
     
 }
 @media(max-width: 1050px){
-    .logo{
-        width: 30%;
-    }
     .carousel{
         width: 55%;
     }
@@ -261,7 +256,6 @@ ul li::marker{
 @media(max-width: 900px){
     .contenedor_iconos{
         display:flex;
-        justify-content: space-around;
         width: 50%;
     }
     .carousel{
@@ -278,6 +272,12 @@ ul li::marker{
     }
     .precio_online{
         width: 25%;
+    }
+    .logo{
+        width: 20%;
+    }
+    .disponibles{
+        width: 100%;
     }
 }
 @media(max-width: 800px){
@@ -304,6 +304,9 @@ ul li::marker{
 	nav{
         flex-direction: column;
     }
+    .contenedor_iconos{
+        display: flex;
+    }
     .carousel, aside{
         width: 80%;
     }
@@ -314,12 +317,12 @@ ul li::marker{
         flex-direction: column;
         width: 90%;
     }
+    .logo{
+        width: 25%;
+    }
 
 }
 @media(max-width: 500px){
-    .disponibles{
-        width: 60%;
-    }
     .contenedor_caracteristicas > .clave, p{
         width: 100%;
     }
@@ -327,9 +330,6 @@ ul li::marker{
 @media(max-width: 450px){
     .logo{
         width:50%;
-    }
-    .disponibles{
-        width: 75%;
     }
 }
 @media(max-width: 390px){

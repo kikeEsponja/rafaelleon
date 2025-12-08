@@ -22,12 +22,17 @@ function mostrarCarrito(){
 
     carrito.forEach(item =>{
         html += `
-        <div class="item-carrito">
-            <h3>${item.nombre}</h3>
-            <p>Precio: S/ ${formatoMoneda(item.precio)}</p>
-            <p>Cantidad: ${item.cantidad}</p>
-            <button class="del" data-id="${item.id}">Eliminar</button>
-        </div>
+        <tr>
+            <td>
+                <img src="../${item.imagen}" alt="" class="img_car">
+            <td>${item.nombre}</td>
+            <td><p class="tlf_car">Cantidad</p> ${item.cantidad}</td>
+            <td><p class="tlf_car">Precio</p> ${formatoMoneda(item.precio)}</td>
+            <td><p class="tlf_car">Subtotal</p> ${formatoMoneda(item.precio * item.cantidad)}</td>
+            <td>
+                <button class="del bi bi-trash" data-id="${item.id}"></button>
+            </td>
+        </tr>
         <hr>
         `;
     });
@@ -39,9 +44,10 @@ function actualizarCarrito(){
 
     const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
     const totalPrecio = carrito.reduce((acc, item) => acc + (item.cantidad * item.precio), 0);
+    const totalSub = carrito.reduce((acc, item) => acc + (item.cantidad * item.precio), 0);
 
     document.getElementById('total_productos').textContent = totalProductos;
-
+    document.getElementById('total_sub').textContent = 'S/ ' + formatoMoneda(totalSub);
     document.getElementById('total_total').textContent = 'S/ ' + formatoMoneda(totalPrecio);
 }
 
@@ -61,9 +67,9 @@ document.addEventListener('click', e => {
     }
 });
 
-document.getElementById('vaciar').addEventListener('click', () =>{
+/*document.getElementById('vaciar').addEventListener('click', () =>{
     localStorage.removeItem('carrito');
     carrito = [];
     mostrarCarrito();
     actualizarCarrito();
-});
+});*/
