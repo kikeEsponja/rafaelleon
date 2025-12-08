@@ -257,6 +257,7 @@ ul li::marker{
     .contenedor_iconos{
         display:flex;
         width: 50%;
+        justify-content: space-around;
     }
     .carousel{
         width: 65%;
