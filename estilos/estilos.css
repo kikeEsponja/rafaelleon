@@ -45,7 +45,7 @@ header > img{
 .link_logo{
   	border-radius: 30px;
   	/*background: aliceblue;*/
-  	width: 220px;
+  	width: 30%;
 	display: flex;
 }
 .agregar_al_carro_item{
@@ -219,6 +219,12 @@ footer > div{
 	.boton_mobile{
 		font-size: 30px;
 		background: transparent;
+		width: 30%;
+	}
+	.participa{
+		width: 30%;
+		border: none;
+		font-size: 20px;
 	}
   	.dropdown{
     	display: flex;
@@ -290,11 +296,14 @@ footer > div{
 	}
 }
 @media(max-width: 450px){
-	.buscador input{
-		width: 80%;
+	.buscador div{
+		width: 90%;
 	}
 	.buscar{
 		width: 50%;
+	}
+	.link_logo{
+		width:50%;
 	}
 	footer > div{
 		display: flex;
@@ -317,5 +326,11 @@ footer > div{
 	}
 	.boton_mmgv{
 		width: 47%;
+	}
+	.link_logo{
+		width:75%;
+	}
+	.desaparecer{
+		display: none;
 	}
 }

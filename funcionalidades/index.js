@@ -53,6 +53,10 @@ document.addEventListener('click', e =>{
         alert('añadido');
         click = click + 1;
         let compras = document.getElementById('compras');
+        let mCompras = document.getElementById('m_compras');
+        let mComprasRight = document.getElementById('m_compras_right');
         compras.textContent = click;
+        mCompras.textContent = click;
+        mComprasRight.textContent = click;
     }
 });

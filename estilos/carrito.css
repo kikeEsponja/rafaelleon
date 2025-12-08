@@ -172,10 +172,15 @@ aside{
 /* NUEVO */
 .modal-body{
     text-align: center;
+    height: 40dvh;
 }
 .modal-body > i{
     font-size: 150px;
     color: #FD2B73;
+}
+.modal-body > form{
+	display: flex;
+	flex-direction: column;
 }
 .contenedor_caracteristicas > p{
     width: 100%;
