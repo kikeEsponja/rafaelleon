@@ -44,7 +44,7 @@ botonSuma.addEventListener('click', function(){
         botonSuma.setAttribute('disabled', null);
     }
 });
-//-------------------------------CARRITO---------------------------------------------------
+//---------------------------------------------CARRITO---------------------------------------------------
 const botonAgregar = document.getElementById('agregar-carrito');
 
 botonAgregar.addEventListener('click', () =>{
@@ -66,6 +66,7 @@ botonAgregar.addEventListener('click', () =>{
             ...producto,
             cantidad: cantidadElegida
         });
+        window.location.href = './carrito.html';
     }
 
     localStorage.setItem('carrito', JSON.stringify(carrito));

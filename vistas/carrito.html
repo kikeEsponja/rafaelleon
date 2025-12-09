@@ -9,6 +9,7 @@
     <link rel="icon" href="../imagenes/hiraoka_icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>carrito</title>
+
 </head>
 <body>
     <header>
@@ -45,10 +46,10 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ya casi es tuyo!</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Unos datos más!</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body_first">
                         <h2>Ingresa tus datos</h2>
                         <form action="">
                             <input class="form-control" type="text" placeholder="Nombre">
@@ -59,6 +60,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
+                        <div id="tel_req">Se requiere teléfono</div>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_2" id="continuar">Continuar</button>
                     </div>
@@ -74,10 +76,30 @@
                     </div>
                     <div class="modal-body">
                         <h6>Escanear código</h6>
-                        <i class="bi bi-qr-code"></i>
+                        <img src="../imagenes/qrcode.jpeg" class="qrcode">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <!--<button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal_3" id="continuar">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal_3" tabindex="-1" aria-labelledby="exampleModalLabel_3" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Listo!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body_first">
+                        <h6>Escanear código</h6>
+                        <a title="social-icon" target="_blank" href="https://wa.me/51935436672?text=Hola,%20estoy%20interesado%20en%20contactarte.">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" disabled>Listo!</button>
                         <!--<button type="button" class="btn btn-primary w-100 comprar" data-bs-toggle="modal" data-bs-target="#exampleModal">Comprar</button>-->
                     </div>
                 </div>
@@ -126,13 +148,18 @@
         let telefono = document.getElementById('telefono');
         let continuar = document.getElementById('continuar');
         continuar.setAttribute('disabled', true);
+        let telReq = document.getElementById('tel_req');
+        let invisible = telReq.style.display = 'none';
 
         telefono.addEventListener('input', () =>{
-            if(telefono.value.trim() !== ''){
+            const valor = telefono.value.trim();
+            if(valor !== '' && /^\d+$/.test(valor)){
                 continuar.removeAttribute('disabled', true);
             }else{
-                alert('teléfono requerido');
+                //alert('teléfono requerido');
                 continuar.setAttribute('disabled', true);
+                
+                setTimeout(invisible, 3000);
             }
         });
     </script>
