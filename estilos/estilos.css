@@ -165,15 +165,22 @@ footer > div{
   	margin: 1%;
   	color: #fff;
 }
+.modal-body_first > a{
+    font-size: 150px;
+    color: #25D366;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 .texto_fijo{
     display: flex;
     flex-direction: column;
-    font-size: 40px;
     position: fixed;
     top:80%;
     right: 20px;
 }
-.texto_fijo > a > i{
+.texto_fijo > button > i{
+	font-size: 30px;
 	color: #25D366;
 }
 @media(max-width: 1300px){

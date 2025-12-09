@@ -59,6 +59,26 @@
         <!--<img src="./imagenes/H16_-_Adelante_tu_navidad_mobile.png" alt="" class="mobile">-->
     </header>
     <main>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Listo!</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body_first">
+                        <h6>Comunicarse con atención al cliente</h6>
+                        <a title="social-icon" target="_blank" href="https://wa.me/51935436672?text=Hola,%20estoy%20interesado%20en%20contactarte.">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" disabled>Listo!</button>
+                        <!--<button type="button" class="btn btn-primary w-100 comprar" data-bs-toggle="modal" data-bs-target="#exampleModal">Comprar</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="buscador">
             <h4 class="marcas">Las mejores marcas</h4>
             <div>
@@ -69,9 +89,10 @@
         
         <section class="grilla" id="lista-productos"></section>
         <aside class="text-primary texto_fijo">
-        	<a title="social-icon" target="_blank" href="https://wa.me/51935436672?text=Hola,%20estoy%20interesado%20en%20contactarte.">
+        	<button title="wsp" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light">
                 <i class="bi bi-whatsapp"></i>
-            </a>
+                <!--<small>Atención al cliente</small>-->
+            </button>
         </aside>
     </main>
     <footer>
