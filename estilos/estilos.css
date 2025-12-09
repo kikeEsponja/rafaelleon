@@ -176,11 +176,12 @@ footer > div{
     display: flex;
     flex-direction: column;
     position: fixed;
-    top:80%;
-    right: 20px;
+    top:90%;
+    right: 5px;
 }
 .texto_fijo > button > img{
 	width: 50px;
+	border-radius: 50%;
 }
 .texto_fijo > button{
 	background: transparent;
