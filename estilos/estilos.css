@@ -20,6 +20,9 @@ header > img{
   	height: 300px;
   	width: 100%;
 }
+/*nav{
+	height: 25dvh;
+}*/
 .carousel{
 	position: fixed;
 	width: 100%;
@@ -45,8 +48,10 @@ header > img{
 .link_logo{
   	border-radius: 30px;
   	/*background: aliceblue;*/
-  	width: 30%;
+  	width: 15%;
 	display: flex;
+	margin-top: 3%;
+
 }
 .agregar_al_carro_item{
 	border: none;
@@ -213,6 +218,12 @@ footer > div{
 	}
 }
 @media(max-width: 940px){
+	.link_logo{
+		margin-top: 1%;
+	}
+	nav{
+		height: 20dvh;
+	}
 	.boton_mmgv{
 		width: 23%;
 	}
@@ -229,6 +240,12 @@ footer > div{
 	}
 }
 @media(max-width: 800px){
+	nav{
+		height: 0;
+	}
+	header{
+		height: 20dvh;
+	}
 	.banner{
 		font-size: 100%;
 	}
@@ -274,6 +291,10 @@ footer > div{
 	}
 	.precio_online{
 		width: 35%;
+	}
+	.link_logo{
+		margin-top: 0;
+		width: 20%;
 	}
 }
 @media(max-width: 700px){
@@ -325,7 +346,7 @@ footer > div{
 		width: 50%;
 	}
 	.link_logo{
-		width:100%;
+		width:40%;
 	}
 	footer > div{
 		display: flex;
@@ -350,7 +371,7 @@ footer > div{
 		width: 47%;
 	}
 	.link_logo{
-		width:75%;
+		width:70%;
 	}
 	.desaparecer{
 		display: none;
